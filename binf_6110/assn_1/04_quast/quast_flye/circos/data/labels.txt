@@ -1,0 +1,1 @@
+NC_003197.2	0	0	null	track0=assembly1,track1=ANY

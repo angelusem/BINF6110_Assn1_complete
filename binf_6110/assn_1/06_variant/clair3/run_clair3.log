@@ -1,0 +1,111 @@
+[INFO] CLAIR3 VERSION: v1.1.2
+[INFO] BAM FILE PATH: /work/05_align/reads_to_ref.sorted.bam
+[INFO] REFERENCE FILE PATH: /work/00_refGenome/GCF_000006945.2_ASM694v2_genomic.fna
+[INFO] MODEL PATH: /opt/models/r1041_e82_400bps_sup_v500
+[INFO] OUTPUT FOLDER: /work/06_variant/clair3
+[INFO] PLATFORM: ont
+[INFO] THREADS: 10
+[INFO] BED FILE PATH: EMPTY
+[INFO] VCF FILE PATH: EMPTY
+[INFO] CONTIGS: EMPTY
+[INFO] CONDA PREFIX: 
+[INFO] SAMTOOLS PATH: samtools
+[INFO] PYTHON PATH: python3
+[INFO] PYPY PATH: pypy3
+[INFO] PARALLEL PATH: parallel
+[INFO] WHATSHAP PATH: whatshap
+[INFO] LONGPHASE PATH: EMPTY
+[INFO] CHUNK SIZE: 5000000
+[INFO] FULL ALIGN PROPORTION: 0.7
+[INFO] FULL ALIGN REFERENCE PROPORTION: 0.1
+[INFO] PHASING PROPORTION: 0.7
+[INFO] MINIMUM MQ: 5
+[INFO] MINIMUM COVERAGE: 2
+[INFO] SNP AF THRESHOLD: 0.08
+[INFO] INDEL AF THRESHOLD: 0.15
+[INFO] BASE ERROR IN GVCF: 0.001
+[INFO] GQ BIN SIZE IN GVCF: 5
+[INFO] ENABLE FILEUP ONLY CALLING: False
+[INFO] ENABLE FAST MODE CALLING: False
+[INFO] ENABLE CALLING SNP CANDIDATES ONLY: False
+[INFO] ENABLE PRINTING REFERENCE CALLS: False
+[INFO] ENABLE OUTPUT GVCF: False
+[INFO] ENABLE HAPLOID PRECISE MODE: False
+[INFO] ENABLE HAPLOID SENSITIVE MODE: False
+[INFO] ENABLE INCLUDE ALL CTGS CALLING: True
+[INFO] ENABLE NO PHASING FOR FULL ALIGNMENT: True
+[INFO] ENABLE REMOVING INTERMEDIATE FILES: False
+[INFO] ENABLE LONGPHASE FOR INTERMEDIATE VCF PHASING: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING WHATSHAP: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING LONGPHASE: False
+[INFO] ENABLE HAPLOTAGGING FINAL BAM: False
+[INFO] ENABLE LONG INDEL CALLING: False
+[INFO] ENABLE C_IMPLEMENT: True
+
++ /opt/bin/scripts/clair3_c_impl.sh --bam_fn /work/05_align/reads_to_ref.sorted.bam --ref_fn /work/00_refGenome/GCF_000006945.2_ASM694v2_genomic.fna --threads 10 --model_path /opt/models/r1041_e82_400bps_sup_v500 --platform ont --output /work/06_variant/clair3 --bed_fn=EMPTY --vcf_fn=EMPTY --ctg_name=EMPTY --sample_name=SAMPLE --chunk_num=0 --chunk_size=5000000 --samtools=samtools --python=python3 --pypy=pypy3 --parallel=parallel --whatshap=whatshap --qual=2 --var_pct_full=0.7 --ref_pct_full=0.1 --var_pct_phasing=0.7 --snp_min_af=0.08 --indel_min_af=0.15 --min_mq=5 --min_coverage=2 --min_contig_size=0 --pileup_only=False --gvcf=False --base_err=0.001 --gq_bin_size=5 --fast_mode=False --call_snp_only=False --enable_variant_calling_at_sequence_head_and_tail=False --output_all_contigs_in_gvcf_header=False --print_ref_calls=False --haploid_precise=False --haploid_sensitive=False --include_all_ctgs=True --no_phasing_for_fa=True --pileup_model_prefix=pileup --fa_model_prefix=full_alignment --remove_intermediate_dir=False --enable_phasing=False --enable_long_indel=False --keep_iupac_bases=False --use_gpu=False --longphase_for_phasing=False --longphase=EMPTY --use_whatshap_for_intermediate_phasing=True --use_longphase_for_intermediate_phasing=False --use_whatshap_for_final_output_phasing=False --use_longphase_for_final_output_phasing=False --use_whatshap_for_final_output_haplotagging=False
+
+[INFO] Check environment variables
+[INFO] Create folder /work/06_variant/clair3/log
+[INFO] Create folder /work/06_variant/clair3/tmp/pileup_output
+[INFO] Create folder /work/06_variant/clair3/tmp/merge_output
+[INFO] Create folder /work/06_variant/clair3/tmp/phase_output
+[INFO] Create folder /work/06_variant/clair3/tmp/gvcf_tmp_output
+[INFO] Create folder /work/06_variant/clair3/tmp/full_alignment_output
+[INFO] Create folder /work/06_variant/clair3/tmp/phase_output/phase_vcf
+[INFO] Create folder /work/06_variant/clair3/tmp/phase_output/phase_bam
+[INFO] Create folder /work/06_variant/clair3/tmp/full_alignment_output/candidate_bed
+[INFO] --include_all_ctgs enabled
+[INFO] Call variant in contigs: NC_003197.2 NC_003277.2
+[INFO] Chunk number for each contig: 1 1
+[INFO] 1/7 Call variants using pileup model
+Calling variants ...
+Total processed positions in NC_003277.2 (chunk 1/1) : 7930
+Total time elapsed: 30.43 s
+Calling variants ...
+Total processed positions in NC_003197.2 (chunk 1/1) : 6799
+Total time elapsed: 69.27 s
+
+real	1m15.754s
+user	1m40.449s
+sys	0m10.336s
+[INFO] 2/7 No phasing for full alignment calling
+
+[INFO] 5/7 Select candidates for full-alignment calling
+[INFO] Set variants quality cutoff 35.0
+[INFO] Set reference calls quality cutoff 10.0
+[INFO] Low quality reference calls to be processed in NC_003277.2: 83
+[INFO] Low quality variants to be processed in NC_003277.2: 4921
+[INFO] Low quality reference calls to be processed in NC_003197.2: 367
+[INFO] Low quality variants to be processed in NC_003197.2: 2218
+
+real	0m0.989s
+user	0m1.035s
+sys	0m0.388s
+
+[INFO] 6/7 Call low-quality variants using full-alignment model
+Calling variants ...
+Total processed positions in NC_003197.2 (chunk 1/1) : 2585
+Total time elapsed: 83.16 s
+Calling variants ...
+Total processed positions in NC_003277.2 (chunk 1/1) : 5004
+Total time elapsed: 98.75 s
+
+real	1m44.398s
+user	2m56.432s
+sys	0m13.242s
+
+[INFO] 7/7 Merge pileup VCF and full-alignment VCF
+[INFO] Pileup variants processed in NC_003197.2: 691
+[INFO] Full-alignment variants processed in NC_003197.2: 2192
+[INFO] Pileup variants processed in NC_003277.2: 2377
+[INFO] Full-alignment variants processed in NC_003277.2: 4762
+
+real	0m1.299s
+user	0m1.506s
+sys	0m0.539s
+
+[INFO] Finish calling, output file: /work/06_variant/clair3/merge_output.vcf.gz
+
+real	3m8.938s
+user	4m43.041s
+sys	0m26.243s

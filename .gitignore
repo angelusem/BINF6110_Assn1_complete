@@ -4,3 +4,9 @@ SRR32410565.fastq
 reads_to_ref.bam
 reads_to_ref.sorted.bam
 *.fastq
+
+# ignore large/tooling + alignment outputs
+tools/sratoolkit.3.3.0-ubuntu64/
+tools/sratoolkit.tar.gz
+*.bam
+*.bam.*

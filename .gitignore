@@ -3,3 +3,4 @@
 SRR32410565.fastq
 reads_to_ref.bam
 reads_to_ref.sorted.bam
+*.fastq

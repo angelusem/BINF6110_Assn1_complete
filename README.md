@@ -1,7 +1,8 @@
 
-
 **ASSIGNMENT 1**
 *in progress*
+
+# Bacterial Genome Assembly and Comparison
 
 **Introduction**
 

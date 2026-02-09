@@ -1,0 +1,86 @@
+/usr/local/bin/quast.py 03_assembly/flye/assembly.fasta -r 00_refGen/GCF_000006945.2/ncbi_dataset/data/GCF_000006945.2/GCF_000006945.2_ASM694v2_genomic.fna -g 00_refGen/GCF_000006945.2/ncbi_dataset/data/GCF_000006945.2/genomic.gff -o 04_quast/quast_flye -t 8
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35 (linux_64)
+  Python version: 3.10.12
+  CPUs number: 12
+
+Started: 2026-02-02 05:34:26
+
+Logging to /work/04_quast/quast_flye/quast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+
+CWD: /work
+Main parameters: 
+  MODE: default, threads: 8, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+WARNING: Can't draw plots: python-matplotlib is missing or corrupted.
+
+Reference:
+  /work/00_refGen/GCF_000006945.2/ncbi_dataset/data/GCF_000006945.2/GCF_000006945.2_ASM694v2_genomic.fna ==> GCF_000006945.2_ASM694v2_genomic
+
+Contigs:
+  Pre-processing...
+  03_assembly/flye/assembly.fasta ==> assembly
+
+2026-02-02 05:34:26
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000006945.2_ASM694v2_genomic.fna, length = 4951383, num fragments = 2, GC % = 52.24
+  Contig files: 
+    assembly
+  Calculating N50 and L50...
+    assembly, N50 = 3318685, L50 = 1, auN = 2710788.0, Total length = 5104722, GC % = 52.19, # N's per 100 kbp =  0.00
+Done.
+
+2026-02-02 05:34:28
+Running Contig analyzer...
+  assembly
+  Logging to files /work/04_quast/quast_flye/contigs_reports/contigs_report_assembly.stdout and contigs_report_assembly.stderr...
+  Using existing alignments... 
+  Analysis is finished.
+  Creating total report...
+    saved to /work/04_quast/quast_flye/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /work/04_quast/quast_flye/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /work/04_quast/quast_flye/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+Done.
+
+2026-02-02 05:34:29
+Running NA-NGA calculation...
+  assembly, Largest alignment = 953687, NA50 = 460926, NGA50 = 460926, LA50 = 4, LGA50 = 4
+Done.
+
+2026-02-02 05:34:30
+Running Genome analyzer...
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Loaded 14390 genomic features of type "ANY"
+  assembly
+  Analysis is finished.
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-02-02 05:34:32
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 1: Creating Icarus viewers...
+Done
+
+2026-02-02 05:34:33
+RESULTS:
+  Text versions of total report are saved to /work/04_quast/quast_flye/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /work/04_quast/quast_flye/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /work/04_quast/quast_flye/report.html
+  Icarus (contig browser) is saved to /work/04_quast/quast_flye/icarus.html
+  Log is saved to /work/04_quast/quast_flye/quast.log
+
+Finished: 2026-02-02 05:34:33
+Elapsed time: 0:00:07.070455
+NOTICEs: 3; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

@@ -8,4 +8,4 @@ tools/sratoolkit.3.3.0-ubuntu64/
 tools/sratoolkit.tar.gz
 *.bam
 *.bam.*
-
+depth_per_base.tsv
